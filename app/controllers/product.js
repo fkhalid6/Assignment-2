@@ -64,7 +64,7 @@ module.exports.update = async function (req, res, next) {
 module.exports.remove = async function (req, res, next) {
   try {
     let id = req.params.id;
-    let remoovedProduct = await ProductModel.deleteOne({ _id: id });
+    let removedProduct = await ProductModel.deleteOne({ _id: id });
     res.json({
       message: "Product deleted succesfully",
       success: true,
