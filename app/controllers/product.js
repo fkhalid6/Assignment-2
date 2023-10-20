@@ -1,6 +1,6 @@
 let ProductModel = require('../models/product');
 
-module.exports.list = async function (req, res, next) {
+exports.list = async function (req, res, next) {
   try {
     let allProducts = await ProductModel.find({});
     res.json({

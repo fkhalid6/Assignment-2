@@ -5,7 +5,10 @@ const mongoose = require('mongoose');
 
 module.exports = function(){
 
-    mongoose.connect(config.ATLASDB);
+    mongoose.connect(config.ATLASDB,
+        {useNewUrlParser: true,
+        useUnifiedTopology: true,
+    });
 
     let mongodb = mongoose.connection;
 
